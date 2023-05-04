@@ -13,7 +13,10 @@ def showMenu():
     print("----- Cokeza007 -----")
     print("1. Vat Calculator")
     print("2. Price Calculator")
+    return userSelected()
 
+
+def userSelected():
     userSelected = int(input(">>"))
     if userSelected == 1:
         totalPrice = float(input("Enter total price: "))
