@@ -16,20 +16,21 @@ def showMenu():
 
     userSelected = int(input(">>"))
     if userSelected == 1:
-        return vatCalculator()
+        totalPrice = float(input("Enter total price: "))
+        return vatCalculator(totalPrice)
     elif userSelected == 2:
         return priceCalculator()
 
 
-def vatCalculator(totalPrie):
-    result = totalPrie +(totalPrie *7/100)
+def vatCalculator(totalPrice):
+    result = totalPrice + (totalPrice * 7 / 100)
     return result
 
 
 def priceCalculator():
     price1 = int(input("First Product Price : "))
     price2 = int(input("Second Product Price : "))
-    result = price1 + price2
-    return result
+    return vatCalculator(price1 + price2)
+
 
 print(login())
