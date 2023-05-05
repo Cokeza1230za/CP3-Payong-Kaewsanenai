@@ -3,12 +3,13 @@ priceList = []
 
 
 def showBill():
-    print('Cokeza007'.center(25, '-'))
+    print('Cokeza007'.center(34, '-'))
     total = 0
     for number in range(len(menuList)):
-        print(menuList[number], 'บาท', priceList[number], 'บาท')
+        print(menuList[number], priceList[number], 'บาท')
         total += int(priceList[number])
     print("ราคารวมทั้งหมด:", total, "บาท")
+    print('ขอบคุณที่ใช้บริการนะครับ'.center(40, '-'))
 
 
 while True:
