@@ -1,6 +1,7 @@
 from tkinter import *
 import math
 
+
 def leftClickButton(event):
     bmi = (float(textboxWeight.get()) / math.pow(float(textboxHeight.get()) / 100, 2))
     lableResult.configure(text=int(bmi))
@@ -17,6 +18,7 @@ def leftClickButton(event):
     lableResult2.configure(text=result_text)
 
 MainWindow = Tk()
+MainWindow.title('คำนวณ Bmi')
 lableHeight = Label(MainWindow, text="ส่วนสูง(cm.)").grid(row=0, column=0)
 textboxHeight = Entry(MainWindow)
 textboxHeight.grid(row=0, column=1)
